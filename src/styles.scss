@@ -4,10 +4,12 @@
     font-family: 'Nexa XBold';
     src: url('../src/assets/Nexa/Nexa-XBold.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Nexa XBold Italic';
     src: url('../src/assets/Nexa/Nexa-XBold-Italic.ttf') format('truetype');
 }
+
 @font-face {
     font-family: 'Nexa Heavy';
     src: url('../src/assets/Nexa/NexaHeavy.ttf') format('truetype');
@@ -34,14 +36,16 @@
 }
 
 
-*{
+* {
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
 
 }
 
-:host {display: block;}
+:host {
+    display: block;
+}
 
 
 
@@ -53,27 +57,27 @@ a {
     color: black;
     cursor: pointer;
     text-decoration: none;
-  
-    &:hover {
-      color: black;
-    }
-  
-  }
 
-  * {
+    &:hover {
+        color: black;
+    }
+
+}
+
+* {
     scroll-behavior: smooth
 }
 
 .btn {
-   background-color: white;
-   height: 44px;
-width: 144px;
-left: 844px;
-top: 0px;
-border-radius: 12px;
+    background-color: white;
+    height: 44px;
+    width: 144px;
+    left: 844px;
+    top: 0px;
+    border-radius: 12px;
 
     border: 1px solid #161616;
- 
+
 }
 
 
@@ -82,11 +86,10 @@ input:hover {
     border: 1px solid #4247E5;
 }
 
-input:focus{
+input:focus {
     outline: none;
     border: 1px solid #4247E5;
 }
-
 
 .flex {
     display: flex;
@@ -124,7 +127,7 @@ input:focus{
 // }
 
 @media (max-width: 430px) {
-    * { 
+    * {
         max-width: 327px;
         margin: 0 auto;
     }
