@@ -1,0 +1,79 @@
+.benefits {
+    width: 1152px;
+    height: auto; 
+    margin-top: 112px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block {
+    width: 368px;
+    padding: 24px;
+    height: auto; 
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.block:hover {
+    box-shadow: 0px 4px 14px rgba(6, 7, 7, 0.15);
+    transition-duration: .2s;
+}
+
+.img {
+    width: 72px;
+    height: 72px;
+}
+
+.text {
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #161616;
+    margin-top: 16px;
+}
+
+.subtext {
+    width: 320px;
+    margin-left: 0;
+    font-family: 'Nexa Book';
+    font-size: 14px;
+    line-height: 20px;
+    color: #161616;
+    margin-top: 8px;
+}
+
+.link {
+    font-family: 'Nexa XBold';
+    font-size: 14px;
+    line-height: 22px;
+    color: #4247E5;
+    margin-top: 6px;
+}
+
+@media (max-width: 430px) {
+    * { 
+        max-width: 327px;
+        margin: 0 auto;
+    }
+    
+    .benefits {
+        flex-wrap: wrap;
+        margin-top: 104px;
+        height: auto;
+    }
+
+    .block {
+        height: auto;
+        width: 327px;  
+        margin-bottom: 16px;       
+    }
+
+    .subtext {
+        margin-top: 6px;
+        width: 279px;
+    }
+
+}

@@ -1,0 +1,133 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    width: 1152px;
+    height: auto;
+    margin-top: 96px;
+}
+
+.banner_text{
+    width: 527px;
+    height: auto;
+    margin-top: 30px;
+
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-size: 76px;
+    line-height: 78px;
+    color: #161616;
+}
+
+.banner_subtext {
+    margin-top: 16px;
+    width: 527px;
+    height: auto;
+
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #161616;  
+}
+
+
+.buttons {
+    margin-top: 24px;
+    width: 527px;
+}
+
+.btn_instant {
+    width: auto;
+    height: 48px;
+    padding: 0 35.5px;
+
+    background: #4247E5;
+    border-radius: 12px;
+
+    border: none;
+    color: #FFFFFF;
+
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.btn_instant:hover {
+    background: #3135CD;
+}
+
+.btn_about {
+    margin-left: 24px;
+    width: 172px;
+    height: 48px;
+
+    background: #ECEDFC;
+    border: none;
+    color: #4247E5;
+    border-radius: 12px;
+
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+
+    line-height: 24px;
+    letter-spacing: 0em;   
+}
+
+.btn_about:hover {
+    border: 1px solid #4247E5;
+}
+
+
+.illustration {
+    margin-left: 37px;
+    width: 588px;
+    height: 512px;
+}
+
+
+@media (max-width: 430px) {
+    * { 
+        max-width: 326px;
+        margin: 0 auto;
+    }
+    .banner_text {
+        height: auto;
+        font-size: 48px;
+        line-height: 52px;
+        margin-top: 48px;
+        word-wrap: break-word;
+    }
+    .banner_subtext {
+        height: auto;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    .btn_instant {
+        margin-top: 20px;
+        padding: 12px 27px;
+        width: auto;
+        margin-right: 8px;
+    }
+
+    .btn_about {
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 12px 44px;
+        width: auto;
+    }
+    .banner {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .illustration {
+        width: 327px;
+        height: 284px;
+        margin: 0;
+        margin-top: 34px;
+    }
+}

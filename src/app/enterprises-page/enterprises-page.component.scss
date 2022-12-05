@@ -1,0 +1,245 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    width: 1152px;
+    height: auto;
+    margin-top: 96px;
+}
+
+.banner_text{
+    width: 506px;
+    height: auto;
+    margin-top: 30px;
+
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-size: 76px;
+    line-height: 78px;
+    color: #161616;
+    margin-left: 0;
+}
+
+.banner_subtext {
+    margin-top: 16px;
+    width: 490px;
+    height: auto;
+
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #161616;  
+    margin-left: 0;
+}
+
+
+.buttons {
+    margin-top: 24px;
+    width: 527px;
+}
+
+.btn_instant {
+    width: auto;
+    height: 48px;
+    padding: 0 35.5px;
+
+    background: #4247E5;
+    border-radius: 12px;
+
+    border: none;
+    color: #FFFFFF;
+
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0em;
+}
+
+.btn_instant:hover {
+    background: #3135CD;
+}
+
+.btn_about {
+    margin-left: 24px;
+    width: 172px;
+    height: 48px;
+
+    background: #ECEDFC;
+    border: none;
+    color: #4247E5;
+    border-radius: 12px;
+
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+
+    line-height: 24px;
+    letter-spacing: 0em;   
+}
+
+.btn_about:hover {
+    border: 1px solid #4247E5;
+}
+
+
+.illustration {
+    margin-left: 37px;
+    width: 588px;
+    height: 512px;
+}
+
+
+
+
+.flex {
+    width: 1152px;
+    margin-top: 112px;
+}
+
+.accuracy_maintext {
+    width: 308px;
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px;
+    margin-right: 84px;
+}
+
+.accuracy_block {
+    width: 760px;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.accuracy_img {
+    height: 72px;
+    width: 72px;    
+}
+
+.accuracy_column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.accuracy_text {
+    font-family: 'Nexa Book';
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.accuracy_link {
+    font-family: 'Nexa XBold';
+    font-size: 14px;
+    line-height: 22px;
+    color: #4247E5;
+    margin-left: 0;
+    margin-top: 6px;
+}
+
+@media (max-width: 430px) {
+    * { 
+        max-width: 326px;
+        margin: 0 auto;
+    }
+    .banner_text {
+        height: auto;
+        font-size: 48px;
+        line-height: 52px;
+        margin-top: 48px;
+        word-wrap: break-word;
+    }
+    .banner_subtext {
+        height: auto;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    .btn_instant {
+        margin-top: 20px;
+        padding: 12px 27px;
+        width: auto;
+        margin-right: 8px;
+    }
+
+    .btn_about {
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 12px 44px;
+        width: auto;
+    }
+    .banner {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .illustration {
+        width: 327px;
+        height: 284px;
+        margin: 0;
+        margin-top: 34px;
+    }
+
+    .accuracy_maintext {
+        width: 327px;
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .accuracy_block {
+        margin-top: 32px;
+        width: 327px;
+        padding: 24px;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .accuracy_img {
+        margin-left: 0;
+    }
+
+    .accuracy_column {
+        margin-left: 0;
+    }
+
+    .accuracy_text {
+        margin-top: 16px;
+    }
+
+    .accuracy_link {
+        margin-top: 4px;
+    }
+}
+
+
+.footer{
+    overflow: unset;
+    position: absolute;
+    width: 1152px;
+    height: 150px;
+    left: 224px;
+    top: 4735px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.space {
+    position: absolute;
+    width: 1152px;
+    height: 32px;
+    left: 224px;
+    top: 4885px;
+
+    left:50%; 
+    margin-left:-576px
+}
