@@ -2,12 +2,10 @@
 
 <div class="main_content" *ngIf="quote">
     <div class="maintext">
-        <p>Professional translations</p>
-        <p>in a few clicks</p>
+        <p>Professional translations in a few clicks</p>
     </div>
     <div class="subtext">
-        <p>The easy way to get your documents translated fast.</p>
-        <p>Simple, accurate, secure.</p>
+        <p>The easy way to get your documents translated fast. Simple, accurate, secure.</p>
     </div>
 </div>
 
@@ -24,180 +22,253 @@
 
 
 <div class="calculate">
-    <div *ngIf="!submitted" class="block"></div>
-    <div *ngIf="submitted" class="block_res"></div>
-    <div *ngIf="loading" class="block_load"></div>
+    <!-- <div *ngIf="!submitted" class="block"></div> -->
+    <!-- <div *ngIf="submitted" class="block_res"></div> -->
+    <!-- <div *ngIf="loading" class="block_load"></div> -->
 
-    <div class="from_lab">From</div>
-    <select [(ngModel)]="from" class="from" name="from" id="from">
-        <option *ngFor="let lang of languages_code_list;" value="{{ lang }}">{{ lang }}</option>
-    </select>
-    <img class="from_arrow" src="../../assets/arrow.svg">
-    
-    <div class="to_lab">To</div>
-    <div class="to_drop">
-      <div (click)="openDropdown()" id="dropdown">
-          <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox" id="selected-item"></label>
-          <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'" [style.transform]="!arrowCheckbox ? 'rotate(45deg)': 'rotate(225deg)'"></span>
-      </div>
-      <form [formGroup]="formOrder" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdown === false}">
-        <div>
-          <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search" placeholder="Search">
+
+    <div class="calculate_item">
+        <div class="label_item">From</div>
+        <select class="box_item" [(ngModel)]="from" name="from" id="from">
+            <option *ngFor="let lang of languages_code_list;" value="{{ lang }}">{{ lang }}</option>
+        </select>
+        <img class="arrow_item" src="../../assets/arrow.svg">
+    </div>
+
+    <div class="calculate_item">
+        <div class="label_item">To</div>
+        <div class="to_drop">
+            <div (click)="openDropdown()" id="dropdown">
+                <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox"
+                    id="selected-item"></label>
+                <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'"
+                    [style.transform]="!arrowCheckbox ? 'rotate(45deg)': 'rotate(225deg)'"></span>
+            </div>
+            <form [formGroup]="formOrder" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdown === false}">
+                <div>
+                    <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search"
+                        placeholder="Search">
+                </div>
+                <div id="dropdown-list">
+                    <label *ngFor="let data of languages_code_list; let i=index" class="dropdown-item">
+                        <input (change)="onCheckboxChange($event)" [value]="data" type="checkbox"
+                            class="custom-checkbox">
+                        {{data}}
+                    </label>
+                </div>
+            </form>
         </div>
-        <div id="dropdown-list">
-          <label *ngFor="let data of languages_code_list; let i=index" class="dropdown-item">
-              <input (change)="onCheckboxChange($event)" [value]="data" type="checkbox" class="custom-checkbox">
-              {{data}}
-          </label>
+    </div>
+
+    <div class="calculate_item">
+        <div class="label_item">Word count</div>
+        <input class="box_item" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000" maxlength="7"
+            (keydown)="onKeydown($event)">
+
+        <div *ngIf="!orderServ.fileName">
+            <div class="line"></div>
+            <div class="or">or</div>
+
+            <img class="upload" src="../../assets/upload files.svg" alt="">
+            <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)"></a>
+
         </div>
-      </form>
+
+        <div *ngIf="orderServ.fileName">
+            <div class="order_line"></div>
+            <img class="order_img" src="../../assets/quote/attach-paperclip-symbol(2) 1.svg" alt="">
+            <div class="order_file_count">{{ fileCountStr }}</div>
+            <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">Edit</a>
+        </div>
     </div>
 
-    <div class="word_lab">Word count</div>
-    <input class="word" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000" maxlength="7" (keydown)="onKeydown($event)">
+    <div class="calculate_item">
+        <div class="label_item">Subject</div>
 
-    <div *ngIf="!orderServ.fileName">
-        <img class="upload" src="../../assets/upload files.svg" alt="">
-        <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)"></a>
-        <div class="line"></div>
-        <div class="or">or</div>
+        <select class="box_item" [(ngModel)]="subject" name="subject" id="subject">
+            <option class="subject" *ngFor="let subject of specializations_code_list;" value="{{ subject }}">{{ subject
+                }}</option>
+        </select>
+        <img class="arrow_item" src="../../assets/arrow.svg">
     </div>
 
-    <div *ngIf="orderServ.fileName">
-        <div class="order_line"></div>
-        <img class="order_img" src="../../assets/quote/attach-paperclip-symbol(2) 1.svg" alt="">
-        <div class="order_file_count">{{ fileCountStr }}</div>
-        <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">Edit</a>
+    <div class="calculate_item">
+        <div class="label_item">Delivery date</div>
+        <input class="box_item" [(ngModel)]="delivery" (click)="DateModOpen()" value="Auto (Best price)" type="text">
+        <img class="arrow_item" src="../../assets/schedule.png" alt="">
     </div>
 
-    <div class="subject_lab">Subject</div>
-  
-    <select class="subject" [(ngModel)]="subject" name="subject" id="subject">
-        <option *ngFor="let subject of specializations_code_list;" value="{{ subject }}">{{ subject }}</option>
-    </select>   
-    <img class="subject_arrow" src="../../assets/arrow.svg">
-    
-    <div class="delivery_lab">Delivery date</div>
-    <input [(ngModel)]="delivery" (click)="DateModOpen()" class="delivery" value="Auto (Best price)" type="text">
-    <img class="schedule" src="../../assets/schedule.png" alt="">
+    <div class="show_button">
+        <button class="show" [class.white]="submitted" (click)="submitLoad()">{{ btn_text }}</button>
+    </div>
 
-    <button class="show" [class.white]="submitted" (click)="submitLoad()">{{ btn_text }}</button>
 
-    <button class="pay">Pay after delivery</button>
-    <div class="terms"><span class="bold">We trust you:</span> feel free to pay within 5 days from delivery via bank transfer, credit card, or PayPal. <a href="https://gettranslation.io/faq#payments" class="link">Learn more</a></div>
+    <div class="pay_item">
+        <button class="pay">Pay after delivery</button>
+        <div class="terms">
+            <p><span class="bold">We trust you:</span> feel free to pay within 5 days from delivery via bank
+                transfer, credit card, or PayPal. <a href="https://gettranslation.io/faq#payments" class="link"> Learn
+                    more</a></p>
+        </div>
+    </div>
 
     <div *ngIf="!submitted && !loading">
         <img class="liza_img" src="../../assets/Ellipse 9.png" alt="">
         <div class="liza_maintext">Hello, I'm Lisa. How can I help you?</div>
         <div class="liza_mainsubtext"><span class="bold">Lisa</span>- Senior Account Manager</div>
-        
+
         <div class="liza_text">Have a large project? Get in touch.</div>
-        <div class="liza_subtext">We will help you get a quote for complex documents, PDFs, websites, software, and more.</div>
+        <div class="liza_subtext">We will help you get a quote for complex documents, PDFs, websites, software, and
+            more.</div>
         <button [routerLink]="['/contact']" class="liza_btn">Contact us</button>
     </div>
-<div *ngIf="loading">
-    <span class="sr-only loader"  id="loading"></span> 
-    <div class="spinner">
-        <div class="spinner__circle">
-            <div class="spinner__circle-gradient"></div>
-    
-            <div class="spinner__circle-inner"></div>
+    <div class="loading_container" *ngIf="loading ">
+        <span class="sr-only loader" id="loading"></span>
+        <div class="spinner">
+            <div class="spinner__circle">
+                <div class="spinner__circle-gradient"></div>
+
+                <div class="spinner__circle-inner"></div>
+            </div>
         </div>
-    </div>
-    <div class="choouse_load">Choosing the best available translator</div>
-</div>   
-
-<div *ngIf="submitted">
-    <div class="choose">Choose your solution</div>
-    <div class="block1"></div>
-    <div class="type1">Premium</div>
-    <img class="img11" src="../../assets/quote/user(6) 1.svg" alt="">
-    <img class="img12" src="../../assets/quote/quality 1.svg" alt="">
-    <img class="img13" src="../../assets/quote/user(7) 1.svg" alt="">
-    <div class="desc11">Translator</div>
-    <div class="desc12">Quality control</div>
-    <div class="desc13">Specialized Reviser</div>
-    <div class="delivery1">delivery guaranteed by</div>
-
-    <!--- TODO(dan): Sync up the time based on IP data-->
-    <div class="date1">{{ date1s }} {{ timezone }}</div>
-
-    <div class="need1" (click)="DateModOpen()">Need it faster?</div>
-    <div class="price1">€{{ price1 }}</div>
-    <div class="about1">about €0,15 / word</div>
-
-    <button class="btn1" (click)="order('Premium')">Order</button>
-    <div *ngIf="detail1">
-        <img class="detail1_img" src="../../assets/quote/Union.svg" alt="">
-        <div class="detail1_text">
-            Translation by a native professional translator. Full revision by a second native professional translator. Final quality control by a dedicated project manager. Translation memory and glossary included upon request. High-quality translation for publication purposes.
-        </div>
-    </div>
-    <a (mouseover)="detail1=true" (mouseout)="detail1=false" class="more1">More details</a>
-
-    <div class="block2"></div>
-    <img class="label_img2" src="../../assets/quote/Rectangle 60.svg" alt="">
-    <div class="label2">Best Seller</div>
-    <div class="type2">Professional</div>
-    <img class="img21" src="../../assets/quote/user(6) 1.svg" alt="">
-    <img class="img22" src="../../assets/quote/quality 1.svg" alt="">
-    <div class="desc21">Translator</div>
-    <div class="desc22">Quality control</div>
-    <div class="delivery2">delivery guaranteed by</div>
-
-    <!--- TODO(dan): Sync up the time based on IP data-->
-    <div class="date2">{{ date2s }} {{ timezone }}</div>
-
-    <div class="need2" (click)="DateModOpen()">Need it faster?</div>
-    <div class="price2">€{{ price2 }}</div>
-    <div class="about2">about €0,10 / word</div>
-
-    <button class="btn2" (click)="order('Professional')">Order</button>
-    <div *ngIf="detail2">
-        <img class="detail2_img" src="../../assets/quote/Union.svg" alt="">
-        <div class="detail2_text">Translation by a native professional translator. Quality evaluation by a second native professional translator. Final quality control by a dedicated project manager. Translation memory included upon request. Professional translation
-            <p>for standard projects.</p>
-        </div>
+        <div class="choose_load">Choosing the best available translator</div>
     </div>
 
-    <a (mouseover)="detail2=true" (mouseout)="detail2=false"  class="more2">More details</a>
+    <div class="submitted_container" *ngIf="submitted">
+        <div class="choose">Choose your solution</div>
+        <div class="flex_submitted_container">
+            <div class="suggested_card">
+                <div class="title_card">Premium</div>
+                <div class="points_of_card">
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
+                        <p>Translator</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(7) 1.svg" alt="">
+                        <p>Specialized Reviser</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/quality 1.svg" alt="">
+                        <p>Quality control</p>
+                    </div>
+                </div>
+                <div class="delivery_label">delivery guaranteed by</div>
 
-    <div class="block3"></div>
-    <div class="type3">Basic</div>
-    <img class="img31" src="../../assets/quote/flash 1.svg" alt="">
-    <img class="img32" src="../../assets/quote/user(6) 1.svg" alt="">
-    <div class="desc31">Machine translation</div>
-    <div class="desc32">Light review</div>
-    <div class="delivery3">delivery guaranteed by</div>
+                <!--- TODO(dan): Sync up the time based on IP data-->
+                <div class="date_item">{{ date1s }} {{ timezone }}</div>
 
-    <!--- TODO(dan): Sync up the time based on IP data-->
-    <div class="date3">{{ date3s }} {{ timezone }}</div>
+                <div class="needfast_item" (click)="DateModOpen()">Need it faster?</div>
+                <div class="price_label">€{{ price1 }}</div>
+                <div class="about_label">about €0,15 / word</div>
 
-    <div class="need3" (click)="DateModOpen()">Need it faster?</div>
-    <div class="price3">€{{ price3 }}</div>
-    <div class="about3">about €0,04 / word</div>
-    
-    <button class="btn3" (click)="order('Basic')">Order</button>
-    <div *ngIf="detail3">
-        <img class="detail3_img" src="../../assets/quote/Union.svg" alt="">
-        <div class="detail3_text">Light edit of a machine generated translation by a native professional translator to remove the most serious errors only. Not available for scanned PDFs and images. Valuable translation
-            <p>for understanding or personal use.</p>
-            <p>Not suitable for publication purposes.</p>
+                <button class="submit_order" (click)="order('Premium')">Order</button>
+
+                <div *ngIf="detail1">
+                    <img class="detail_img" src="../../assets/quote/Union.svg" alt="">
+                    <div class="detail_text">
+                        Translation by a native professional translator. Full revision by a second native
+                        professional
+                        translator. Final quality control by a dedicated project manager. Translation memory and
+                        glossary
+                        included upon request. High-quality translation for publication purposes.
+                    </div>
+                </div>
+                <a class="moredetails_item" (mouseover)="detail1=true" (mouseout)="detail1=false">More details</a>
+
+
+            </div>
+
+            <div class="suggested_card">
+                <img class="tag_image" src="../../assets/quote/Rectangle 60.svg" alt="">
+                <div class="tag_card">Best Seller</div>
+                <div class="title_card">Professional</div>
+                <div class="points_of_card">
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
+                        <p>Translator</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/quality 1.svg" alt="">
+                        <p>Quality control</p>
+                    </div>                    
+                    <div class="point_item"> 
+                        <p></p>
+                    </div>
+                </div>
+                <div class="delivery_label">delivery guaranteed by</div>
+
+                <!--- TODO(dan): Sync up the time based on IP data-->
+                <div class="date_item">{{ date2s }} {{ timezone }}</div>
+
+                <div class="needfast_item" (click)="DateModOpen()">Need it faster?</div>
+                <div class="price_label">€{{ price2 }}</div>
+                <div class="about_label">about €0,10 / word</div>
+
+                <button class="submit_order" (click)="order('Professional')">Order</button>
+                <div *ngIf="detail2">
+                    <img class="detail_img" src="../../assets/quote/Union.svg" alt="">
+                    <div class="detail_text">Translation by a native professional translator. Quality evaluation by a
+                        second
+                        native professional translator. Final quality control by a dedicated project manager.
+                        Translation memory
+                        included upon request. Professional translation
+                        <p>for standard projects.</p>
+                    </div>
+                </div>
+
+                <a (mouseover)="detail2=true" (mouseout)="detail2=false" class="moredetails_item">More details</a>
+            </div>
+
+            <div class="suggested_card">
+                <div class="title_card">Basic</div>
+                <div class="points_of_card">
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/flash 1.svg" alt="">
+                        <p>Machine translation</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
+                        <p>Light review</p>
+                    </div>
+                </div>
+
+                <div class="delivery_label">delivery guaranteed by</div>
+
+                <!--- TODO(dan): Sync up the time based on IP data-->
+                <div class="date_item">{{ date3s }} {{ timezone }}</div>
+
+                <div class="needfast_item" (click)="DateModOpen()">Need it faster?</div>
+                <div class="price_label">€{{ price3 }}</div>
+                <div class="about_label">about €0,04 / word</div>
+
+                <button class="submit_order" (click)="order('Basic')">Order</button>
+                <div *ngIf="detail3">
+                    <img class="detail_img" src="../../assets/quote/Union.svg" alt="">
+                    <div class="detail_text">Light edit of a machine generated translation by a native professional
+                        translator
+                        to remove the most serious errors only. Not available for scanned PDFs and images. Valuable
+                        translation
+                        <p>for understanding or personal use.</p>
+                        <p>Not suitable for publication purposes.</p>
+                    </div>
+                </div>
+
+                <a (mouseover)="detail3=true" (mouseout)="detail3=false" class="moredetails_item">More details</a>
+            </div>
         </div>
     </div>
-
-    <a (mouseover)="detail3=true" (mouseout)="detail3=false" class="more3">More details</a>
-</div>
 
 </div>
 <div *ngIf="submitted" class="liza">
     <img class="liza_img_res" src="../../assets/Ellipse 9.png" alt="">
-<div class="liza_maintext_res">Hello, I'm Lisa. How can I help you?</div>
-<div class="liza_mainsubtext_res"><span class="bold">Lisa</span>- Senior Account Manager</div>
+    <div class="liza_maintext_res">Hello, I'm Lisa. How can I help you?</div>
+    <div class="liza_mainsubtext_res"><span class="bold">Lisa</span>- Senior Account Manager</div>
 
-<div class="liza_text_res">Have a large project? Get in touch.</div>
-<div class="liza_subtext_res">We will help you get a quote for complex documents, PDFs, websites, software, and more.</div>
-<button [routerLink]="['/contact']" class="liza_btn_res">Contact us</button>
+    <div class="liza_text_res">Have a large project? Get in touch.</div>
+    <div class="liza_subtext_res">We will help you get a quote for complex documents, PDFs, websites, software, and
+        more.</div>
+    <button [routerLink]="['/contact']" class="liza_btn_res">Contact us</button>
 </div>
 
 <div *ngIf="quote">
@@ -223,18 +294,19 @@
     <div class="urgent_space"></div>
 </div>
 
-<div *ngIf="upload_mod" class="upload_mod" [ngClass]="{'upload_mod_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_error': upload_mod_status =='ERROR'}">
+<div *ngIf="upload_mod" class="upload_mod"
+    [ngClass]="{'upload_mod_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_error': upload_mod_status =='ERROR'}">
     <a (click)="UploudModClose()">
         <img class="upload_mod_close" src="../../assets/close.svg" alt="">
     </a>
- 
+
     <div class="upload_mod_text">Word count tool</div>
 
     <div *ngIf="upload_mod_status == 'OK' || upload_mod_status == 'ERROR'" class="upload_mod_status">
         <div class="flex">
             <div class="upload_mod_status_name">{{ orderServ.fileName }}</div>
             <a (click)="deleteFile()" class="upload_mod_status_delete">
-                <img  src="../../assets/Frame 38.svg" alt="">
+                <img src="../../assets/Frame 38.svg" alt="">
             </a>
         </div>
         <div class="upload_mod_status_word">({{ word }} words)</div>
@@ -253,16 +325,24 @@
     <div *ngIf="upload_mod_status == 'ERROR'">
         <div class="upload_mod_status_error">Unfortunately we could not count the words for this file.</div>
         <div class="upload_mod_status_please">Please insert the estimated word count:</div>
-        <input class="upload_mod_status_input" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000" maxlength="7" (keydown)="onKeydown($event)">
-        <div class="upload_mod_status_contact"><a [routerLink]="['/contact']" class="link">Contact us</a> if you wish us to count words for you.</div>
+        <input class="upload_mod_status_input" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000"
+            maxlength="7" (keydown)="onKeydown($event)">
+        <div class="upload_mod_status_contact"><a [routerLink]="['/contact']" class="link">Contact us</a> if you wish us
+            to count words for you.</div>
     </div>
 
     <div>
-        <img class="upload_mod_img" [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_img_error': upload_mod_status =='ERROR'}" src="../../assets/Group 230 (1).svg" alt="">
-        <input class="upload_mod_btn" [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_btn_error': upload_mod_status =='ERROR'}" type="file" (change)="changeListener($event)">    
+        <img class="upload_mod_img"
+            [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_img_error': upload_mod_status =='ERROR'}"
+            src="../../assets/Group 230 (1).svg" alt="">
+        <input class="upload_mod_btn"
+            [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_btn_error': upload_mod_status =='ERROR'}"
+            type="file" (change)="changeListener($event)">
     </div>
-    
-    <button (click)="UploudModClose()" [ngClass]="{'upload_mod_done_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_done_error': upload_mod_status =='ERROR'}" class="upload_mod_done">Done</button>
+
+    <button (click)="UploudModClose()"
+        [ngClass]="{'upload_mod_done_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_done_error': upload_mod_status =='ERROR'}"
+        class="upload_mod_done">Done</button>
 
     <div *ngIf="upload_mod_status == 'IN_PROCESS'" class="loader-line"></div>
     <!-- <span *ngIf="upload_mod_status == 'IN_PROCESS'" class="sr-only loading"  id="loading"></span> -->
@@ -272,40 +352,41 @@
     <a (click)="DateModClose()">
         <img class="upload_mod_close" src="../../assets/close.svg" alt="">
     </a>
-        <div class="date_mod_text">Select the delivery date</div>
-        <div class="date_mod_block1" [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}"></div>
-            <input [(ngModel)]="delivery_mod" class="date_mod_rad1" type="radio" id="auto" name="delivery" value="Auto (best price)" checked >
-  
-      
-        <label class="date_mod_l1" for="auto">Auto (best price)</label>
+    <div class="date_mod_text">Select the delivery date</div>
+    <div class="date_mod_block1" [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}"></div>
+    <input [(ngModel)]="delivery_mod" class="date_mod_rad1" type="radio" id="auto" name="delivery"
+        value="Auto (best price)" checked>
 
-        <div class="date_mod_block2" [ngClass]="{'date_mod_block2_st2': delivery_mod=='Delivery guaranteed by'}"></div>
-            <input [(ngModel)]="delivery_mod" class="date_mod_rad2" type="radio" id="guaranteed" name="delivery" value="Delivery guaranteed by">
-            <label class="date_mod_l2" for="guaranteed">Delivery guaranteed by</label>
-        
-            <input [(ngModel)]="mod_date" class="mod_date" type="date" id="start" name="trip-start" [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
-            <img class="mod_date_arrow" src="../../assets/arrow.svg">
 
-            <input [(ngModel)]="mod_time" class="mod_time" type="time" id="appt" name="appt" [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
-            <img class="mod_time_arrow" src="../../assets/arrow.svg">
-            <!-- <input type="date" id="start" name="trip-start"
+    <label class="date_mod_l1" for="auto">Auto (best price)</label>
+
+    <div class="date_mod_block2" [ngClass]="{'date_mod_block2_st2': delivery_mod=='Delivery guaranteed by'}"></div>
+    <input [(ngModel)]="delivery_mod" class="date_mod_rad2" type="radio" id="guaranteed" name="delivery"
+        value="Delivery guaranteed by">
+    <label class="date_mod_l2" for="guaranteed">Delivery guaranteed by</label>
+
+    <input [(ngModel)]="mod_date" class="mod_date" type="date" id="start" name="trip-start"
+        [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+    <img class="mod_date_arrow" src="../../assets/arrow.svg">
+
+    <input [(ngModel)]="mod_time" class="mod_time" type="time" id="appt" name="appt"
+        [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+    <img class="mod_time_arrow" src="../../assets/arrow.svg">
+    <!-- <input type="date" id="start" name="trip-start"
             value="2018-07-22"
             min="2018-01-01" max="2018-12-31"> -->
 
-            <select [(ngModel)]="mod_type" class="mod_type" name="type" id="type" [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
-                <option value="EET">(EET) Eastern European Time</option>
-                <option value="CET" selected>(CET) Central European Time</option>
-            </select>
-            <img class="mod_type_arrow" src="../../assets/arrow.svg">
+    <select [(ngModel)]="mod_type" class="mod_type" name="type" id="type"
+        [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+        <option value="EET">(EET) Eastern European Time</option>
+        <option value="CET" selected>(CET) Central European Time</option>
+    </select>
+    <img class="mod_type_arrow" src="../../assets/arrow.svg">
 
-        <button (click)="DateModClose()" class="date_mod_done">Done</button>
-   
+    <button (click)="DateModClose()" class="date_mod_done">Done</button>
+
 </div>
 
 
 <div (click)="allModalClose()" [ngClass]="{'popup-fade': upload_mod || date_mod }"></div>
 <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdown }"></div>
-
-
-
-
