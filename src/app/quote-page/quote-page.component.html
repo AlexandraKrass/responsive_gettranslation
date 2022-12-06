@@ -104,7 +104,7 @@
 
 
     <div class="pay_item">
-        <button class="pay">Pay after delivery</button>
+        <div class="pay">Pay after delivery</div>
         <div class="terms">
             <p><span class="bold">We trust you:</span> feel free to pay within 5 days from delivery via bank
                 transfer, credit card, or PayPal. <a href="https://gettranslation.io/faq#payments" class="link"> Learn
@@ -112,17 +112,7 @@
         </div>
     </div>
 
-    <div *ngIf="!submitted && !loading">
-        <img class="liza_img" src="../../assets/Ellipse 9.png" alt="">
-        <div class="liza_maintext">Hello, I'm Lisa. How can I help you?</div>
-        <div class="liza_mainsubtext"><span class="bold">Lisa</span>- Senior Account Manager</div>
-
-        <div class="liza_text">Have a large project? Get in touch.</div>
-        <div class="liza_subtext">We will help you get a quote for complex documents, PDFs, websites, software, and
-            more.</div>
-        <button [routerLink]="['/contact']" class="liza_btn">Contact us</button>
-    </div>
-    <div class="loading_container" *ngIf="loading ">
+    <div class="loading_container" *ngIf="loading">
         <span class="sr-only loader" id="loading"></span>
         <div class="spinner">
             <div class="spinner__circle">
@@ -163,19 +153,18 @@
                 <div class="about_label">about €0,15 / word</div>
 
                 <button class="submit_order" (click)="order('Premium')">Order</button>
-
-                <div *ngIf="detail1">
-                    <img class="detail_img" src="../../assets/quote/Union.svg" alt="">
-                    <div class="detail_text">
-                        Translation by a native professional translator. Full revision by a second native
-                        professional
-                        translator. Final quality control by a dedicated project manager. Translation memory and
-                        glossary
-                        included upon request. High-quality translation for publication purposes.
+                <div class="position_detail">
+                    <div class="detail_container" *ngIf="detail1">
+                        <p class="detail_text">
+                            Translation by a native professional translator. Full revision by a second native
+                            professional
+                            translator. Final quality control by a dedicated project manager. Translation memory and
+                            glossary
+                            included upon request. High-quality translation for publication purposes.
+                        </p>
                     </div>
+                    <a class="moredetails_item" (mouseover)="detail1=true" (mouseout)="detail1=false">More details</a>
                 </div>
-                <a class="moredetails_item" (mouseover)="detail1=true" (mouseout)="detail1=false">More details</a>
-
 
             </div>
 
@@ -191,8 +180,8 @@
                     <div class="point_item">
                         <img class="point_img" src="../../assets/quote/quality 1.svg" alt="">
                         <p>Quality control</p>
-                    </div>                    
-                    <div class="point_item"> 
+                    </div>
+                    <div class="point_item">
                         <p></p>
                     </div>
                 </div>
@@ -206,18 +195,17 @@
                 <div class="about_label">about €0,10 / word</div>
 
                 <button class="submit_order" (click)="order('Professional')">Order</button>
-                <div *ngIf="detail2">
-                    <img class="detail_img" src="../../assets/quote/Union.svg" alt="">
-                    <div class="detail_text">Translation by a native professional translator. Quality evaluation by a
-                        second
-                        native professional translator. Final quality control by a dedicated project manager.
-                        Translation memory
-                        included upon request. Professional translation
-                        <p>for standard projects.</p>
+                <div class="position_detail">
+                    <div class="detail_container" *ngIf="detail2">
+                        <p class="detail_text">
+                            Translation by a native professional translator. Quality evaluation by a second
+                            native professional translator. Final quality control by a dedicated project manager.
+                            Translation memory included upon request. Professional translation
+                            for standard projects.
+                        </p>
                     </div>
+                    <a class="moredetails_item" (mouseover)="detail2=true" (mouseout)="detail2=false">More details</a>
                 </div>
-
-                <a (mouseover)="detail2=true" (mouseout)="detail2=false" class="moredetails_item">More details</a>
             </div>
 
             <div class="suggested_card">
@@ -243,32 +231,40 @@
                 <div class="about_label">about €0,04 / word</div>
 
                 <button class="submit_order" (click)="order('Basic')">Order</button>
-                <div *ngIf="detail3">
-                    <img class="detail_img" src="../../assets/quote/Union.svg" alt="">
-                    <div class="detail_text">Light edit of a machine generated translation by a native professional
-                        translator
-                        to remove the most serious errors only. Not available for scanned PDFs and images. Valuable
-                        translation
-                        <p>for understanding or personal use.</p>
-                        <p>Not suitable for publication purposes.</p>
+                <div class="position_detail">
+                    <div class="detail_container" *ngIf="detail3">
+                        <p class="detail_text">
+                            Light edit of a machine generated translation by a native professional translator
+                            to remove the most serious errors only. Not available for scanned PDFs and images. Valuable
+                            translation for understanding or personal use.
+                            Not suitable for publication purposes.
+                        </p>
                     </div>
+                    <a class="moredetails_item" (mouseover)="detail3=true" (mouseout)="detail3=false">More details</a>
                 </div>
-
-                <a (mouseover)="detail3=true" (mouseout)="detail3=false" class="moredetails_item">More details</a>
             </div>
         </div>
     </div>
 
 </div>
-<div *ngIf="submitted" class="liza">
-    <img class="liza_img_res" src="../../assets/Ellipse 9.png" alt="">
-    <div class="liza_maintext_res">Hello, I'm Lisa. How can I help you?</div>
-    <div class="liza_mainsubtext_res"><span class="bold">Lisa</span>- Senior Account Manager</div>
+<div class="liza">
+    <div class="liza_information">
+        <img class="liza_photo" src="../../assets/Ellipse 9.png" alt="">
+        <div class="liza_introduce">
+            <p class="liza_maintext">Hello, I'm Lisa. How can I help you?</p>
+            <p class="liza_mainsubtext"><span class="bold">Lisa </span>- Senior Account Manager</p>
+        </div>
+    </div>
+    <div class="liza_additional">
+    <div class="liza_question">
+        <p class="liza_maintext">Have a large project? Get in touch.</p>
+        <p class="liza_mainsubtext">We will help you get a quote for complex documents, PDFs, websites, software,
+            and
+            more.</p>
 
-    <div class="liza_text_res">Have a large project? Get in touch.</div>
-    <div class="liza_subtext_res">We will help you get a quote for complex documents, PDFs, websites, software, and
-        more.</div>
-    <button [routerLink]="['/contact']" class="liza_btn_res">Contact us</button>
+    </div>
+    <button [routerLink]="['/contact']" class="liza_btn">Contact us</button>
+    </div>
 </div>
 
 <div *ngIf="quote">
