@@ -11,7 +11,7 @@
 }
 
 @mixin tablet-landscape-down {
-    @media (max-width: 950px) {
+    @media (max-width: 960px) {
         @content;
     }
 }

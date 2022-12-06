@@ -1,330 +1,157 @@
-.maintext {
-    position: absolute;
-    left: 0%;
-    right: 76.22%;
-    top: 0%;
-    bottom: 91.3%;
-    
+@import '../../../responsive.scss';
+
+.whychoose_section {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+
+    @include tablet-landscape-down {
+        flex-direction: column;
+    }
+}
+
+.naming_section {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 24px 0 0;
+    color: #161616;
+
+    @include tablet-landscape-down {
+        max-width: 100%;
+        margin: 0 0 32px 0;
+    }
+}
+
+.content_section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    @include tablet-landscape-down {
+        flex-direction: row;
+    }
+    @include tablet-portrait-down {
+        flex-direction: column;
+    }
+}
+
+.title_whychoose {
+    display: flex;
+    margin: 0 0 8px 0;
+
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
     font-size: 38px;
     line-height: 48px;
-    /* identical to box height, or 126% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;   
+
+    color: #161616;
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+    }
 }
 
-.mainsubtext {
-    height: 60px;
-    width: 368px;
-    left: 0px;
-    top: 56px;
- 
-    position: absolute;
-    left: 0%;
-    right: 68.06%;
-    top: 10.14%;
-    bottom: 78.99%;
-    
+.description_whychoose {
     font-family: 'Nexa Book';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-     
+
+    @include tablet-landscape-down {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
 }
 
-.block1 {
-    height: 168px;
-    width: 760px;
-    left: 392px;
-    top: 0px;
+.card_whychoose {
+    display: flex;
+    align-items: center;
+    min-height: 168px;
+    max-width: 760px;
+    width: 100%;
     border-radius: 12px;
+    padding: 24px 32px;
 
-    position: absolute;
-    left: 34.03%;
-    right: 0%;
-    top: 0%;
-    bottom: 69.57%;
-    
     background: #FFFFFF;
     box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
-    border-radius: 12px;    
+    border-radius: 12px;
+    margin: 0 0 24px 0;
+
+    @include tablet-landscape-down {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 14px 0 0;
+    }
+    @include tablet-portrait-down {
+        margin: 0  0 16px 0;
+    }
 }
 
-.img1 {
+.card_icon {
     height: 72px;
     width: 72px;
-    left: 424px;
-    top: 48px;
+    margin-right: 24px;
+
     border-radius: 0px;
 
-    position: absolute;
-    left: 36.81%;
-    right: 56.94%;
-    top: 8.7%;
-    bottom: 78.26%;
+    @include tablet-landscape-down {
+        margin: 0 0 12px 0;
+    }
+    @include tablet-portrait-down {
+        margin-right: 24px;
+    }
 }
 
-.text1 {
-    position: absolute;
-    left: 45.14%;
-    right: 39.67%;
-    top: 4.35%;
-    bottom: 90.94%;
-    
+.card_description {
+    display: flex;
+    flex-direction: column;
+    color: #161616;
+}
+
+.card_text {
+    margin: 0 0 6px 0;
+
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
+    @include tablet-landscape-down {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
-.subtext1{
-    height: 60px;
-    width: 600px;
-    left: 520px;
-    top: 56px;
-    
-    position: absolute;
-    left: 45.14%;
-    right: 2.78%;
-    top: 10.14%;
-    bottom: 78.99%;
-    
+.card_subtext {
+    margin: 0 0 6px 0;
+
     font-family: 'Nexa Book';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
+
+    @include tablet-landscape-down {
+        font-size: 12px;
+        line-height: 18px;
+    }    
+    @include tablet-portrait-down {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
-.link1{
-    position: absolute;
-    left: 45.14%;
-    right: 45.75%;
-    top: 22.1%;
-    bottom: 73.91%;
-    
+.card_link {
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 14px;
     line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
     color: #4247E5;
-}
-
-.block2 {
-    height: 168px;
-    width: 760px;
-    left: 392px;
-    top: 192px;
-    border-radius: 12px;    
-
-    position: absolute;
-    left: 34.03%;
-    right: 0%;
-    top: 34.78%;
-    bottom: 34.78%;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
-    border-radius: 12px;   
-}
-
-.img2 {
-    height: 72px;
-    width: 72px;
-    left: 424px;
-    top: 240px;
-    border-radius: 0px;    
-
-    position: absolute;
-    left: 36.81%;
-    right: 56.94%;
-    top: 43.48%;
-    bottom: 43.48%;
-}
-
-.text2 {
-    position: absolute;
-    left: 45.14%;
-    right: 41.67%;
-    top: 39.13%;
-    bottom: 56.16%;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-}
-
-.subtext2 {
-    height: 60px;
-    width: 600px;
-    left: 520px;
-    top: 248px;
- 
-    position: absolute;
-    left: 45.14%;
-    right: 2.78%;
-    top: 44.93%;
-    bottom: 44.2%;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-}
-
-.link2 {
-    position: absolute;
-    left: 45.14%;
-    right: 45.75%;
-    top: 56.88%;
-    bottom: 39.13%;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    color: #4247E5;
-}
-
-.block3 {
-    height: 168px;
-    width: 760px;
-    left: 392px;
-    top: 384px;
-    border-radius: 12px;
-    
-    position: absolute;
-    left: 34.03%;
-    right: 0%;
-    top: 69.57%;
-    bottom: 0%;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
-    border-radius: 12px; 
-}
-
-.img3 {
-    height: 72px;
-    width: 72px;
-    left: 424px;
-    top: 432px;
-    border-radius: 0px;
-    
-    position: absolute;
-    left: 36.81%;
-    right: 56.94%;
-    top: 78.26%;
-    bottom: 8.7%;
-}
-
-.text3 {
-    position: absolute;
-    left: 45.14%;
-    right: 40.97%;
-    top: 73.91%;
-    bottom: 21.38%;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-}
-
-.subtext3 {
-    height: 60px;
-    width: 600px;
-    left: 520px;
-    top: 440px;
-
-    position: absolute;
-    left: 45.14%;
-    right: 2.78%;
-    top: 79.71%;
-    bottom: 9.42%;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-}
-
-.link3 {
-    position: absolute;
-    left: 45.14%;
-    right: 45.75%;
-    top: 91.67%;
-    bottom: 4.35%;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    color: #4247E5;    
+    margin: 0;
 }

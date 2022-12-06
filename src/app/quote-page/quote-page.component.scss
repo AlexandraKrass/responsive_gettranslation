@@ -453,98 +453,95 @@ select {
 }
 
 .why_choose {
-    display: none;
-    width: 1152px;
-    height: 552px;
-    left: 224px;
-    top: 988px;
-
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
+    flex-direction: column;
+    margin: 60px auto 160px;
+    @include desktop-down{
+        margin: 60px 64px 160px;
+    }    
+    @include tablet-landscape-down{
+        margin: 48px 48px 140px;
+    }
+    @include tablet-portrait-down{
+        margin: 32px 32px 140px;
+    }
 }
 
 .logo_block {
-    position: absolute;
-    width: 1152px;
-    height: 104px;
-    left: 224px;
-    top: 1740px;
-
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+    }
+    @include tablet-portrait-down{
+        margin: 0 32px 120px;
+    }
 }
 
 .our_clients {
-    position: absolute;
-    width: 1152px;
-    height: 402px;
-    left: 224px;
-    top: 2012px;
-    overflow: unset;
-
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+    }
+    @include tablet-portrait-down{
+        margin: 0 32px 120px;
+    }
 }
 
-
-
 .key_benefits {
-    position: absolute;
-    width: 1152px;
-    height: 540px;
-    left: 224px;
-    top: 2582px;
-
-    overflow: unset;
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
 }
 
 .our_professional {
-    position: absolute;
-    width: 1152px;
-    height: 1246px;
-    left: 224px;
-    top: 3290px;
-
-    overflow: unset;
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
 }
 
 .embrace {
-    overflow: unset;
-    position: absolute;
-    width: 1040px;
-    height: 420px;
-    left: 224px;
-    top: 4704px;
-
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+    }
+    @include tablet-portrait-down{
+        margin: 0 32px 120px;
+    }
 }
 
 .more {
-    position: absolute;
-    width: 1035px;
-    height: 208px;
-    left: 224px;
-    top: 5292px;
-
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+    }
+    @include tablet-portrait-down{
+        margin: 0 32px 120px;
+    }
 }
 
 .footer {
-    overflow: unset;
-    position: absolute;
-    width: 1152px;
-    height: 150px;
-    left: 224px;
-    top: 5668px;
-
-    left: 50%;
-    margin-left: -576px
+    display: flex;
+    max-width: 1168px;
+    width: 100%;
 }
 
 .space {
@@ -944,11 +941,11 @@ select {
     }    
     @include tablet-landscape-down{
         flex-wrap: wrap;
-        margin: 48px 48px 140px;
+        margin: 48px 46px 140px;
     }
     @include tablet-portrait-down{
         flex-wrap: wrap;
-        margin: 32px 32px 140px;
+        margin: 32px 32px 120px;
     }
 }
 .liza_information{
@@ -1542,14 +1539,14 @@ select {
 
 .date_mod {
     position: absolute;
-    width: 760px;
-    height: 428px;
+    max-width: 760px;
+    width: 100%;
+    min-height: 428px;
     left: 420px;
     top: 261px;
 
     background: #FFFFFF;
-    /* shadow */
-
+ 
     box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
     border-radius: 20px;
 
