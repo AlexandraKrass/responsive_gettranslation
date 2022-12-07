@@ -1,5 +1,5 @@
 {
-    "header" : { 
+    "header": {
         "enterprises": "Enterprises",
         "developers": "Developers",
         "translators": "Translators",
@@ -7,10 +7,9 @@
         "contact": "Contact us",
         "instant": "Instant quote"
     },
-    "home" : {
+    "home": {
         "banner_text": "Seamless multilingual solutions",
         "banner_subtext": "Solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
-        
         "benefits_text1": "Professional Translation",
         "benefits_subtext1": "Tailored solutions that blend tech solutions with skilled language professionals to enhance the way you work with language.",
         "benefits_link1": "Instant quote",
@@ -20,14 +19,12 @@
         "benefits_text3": "Developers' Tools",
         "benefits_subtext3": "The most sophisticated, yet simple to use, translation APIs for continuous localization, content extraction from 71 file formats.",
         "benefits_link3": "Learn more",
-
         "review_text": "Petrol",
         "review_subtext": "Carter Barloy, Manager",
         "review_desc": "“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.”",
         "cta_text": "Our clients",
         "cta_subtext": "Top companies from all over the world come to us when they want to engage with global audiences in new markets. From retail and travel companies to financial services and life sciences organizations, we're the leading choice for professional translations in over 190 languages with more than 50,000 native-speaking linguists.",
         "cta_link": "Case studies",
-
         "our_maintext": "Our professional services",
         "our_text1": "Website Localization",
         "our_subtext1": "Fully managed solutions for bringing your website to another culture, from multilingual Wordpress sites to complex architectures.",
@@ -49,7 +46,6 @@
         "our_subtext9": "We can translate large volumes in a matter of hours thanks to our extensive network of optimized translators.",
         "our_text10": "Simple Document Translation",
         "our_subtext10": "Use our online quote to experience the fast and easy way to translate your documents in 190 languages, since 2017.",
-        
         "key_maintext": "Key benefits",
         "key_mainsubtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
         "key_text1": "Experience and Trust",
@@ -61,35 +57,29 @@
         "key_text3": "One Step Ahead",
         "key_subtext3": "We offer a wide range of linguistic services that cover all your future needs: Google Ads translation, software localization, subtitling, and APIs to integrate human translation anywhere you need.",
         "key_link3": "Our services",
-        
         "embrace_text": "Embrace our family",
         "embrace_subtext": "Our strength is our people, and we are more than just a translation company. We're a family of committed individuals dedicated to being the world's leading enabler of global communications.",
         "embrace_link": "About us",
-
         "more_text": "Have a large project? Get in touch.",
         "more_subtext": "Speak to one of our account managers to find a solution to your translation needs.",
         "more_btn": "Contact us",
         "more_img_text": "Hello, I'm Lisa. How can I help you?",
         "more_img_subtext": " - Senior Account Manager",
         "more_bold": "Lisa",
-
         "instant_text": "Get an instant quote",
         "instant_subtext": "Choose from a basic, professional or premium translation. Simple, accurate, secure.",
         "instant_btn": "Instant quote"
-
-
     },
-    "enterprises" : {
+    "enterprises": {
         "banner_text": "Seamless solutions for your business",
         "banner_subtext": "Trusted partnerships, reliable support and accessible solutions at scale. Our expertise and solutions are always tailored to your specific business, markets and goals.",
         "accuracy_maintext": "Accuracy starts with processes",
         "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
         "accuracy_link": "Production Process"
     },
-    "developers" : {
+    "developers": {
         "banner_text": "Seamless tools for globalization engineers",
         "banner_subtext": "Translation APIs for continuous localization, advanced repetition leveraging, content extraction from 71 file formats and 21 content sources, neural adaptive machine translation, and much more.",
-    
         "sup_maintext": "Supported file formats",
         "sup_text1": "Interchange formats",
         "sup_subtext1": "xliff, sdlxliff, tmx, ttx, xlf",
@@ -103,23 +93,19 @@
         "sup_subtext5": "properties, resx, xml, sxml, txml, dita, strings, Android xml, rt, wix, po, g",
         "sup_text6": "Text formats",
         "sup_subtext6": "MS Word, MS Excel, MS Power Point, MS Access, MS OneNote, MS Publisher, Open Office, Google Docs, Google Sheets, Google Slides, Zip",
-
         "work_maintext": "Work with us",
         "work_text": "We are constantly looking to hire great engineers with a global mindset. We are tackling the most difficult issue relating to AI: human language. We are doing it with ethics and speed by creating an unprecedented symbiosis between humans and machines.",
         "work_link": "Apply now"
-        
     },
-    "about" : {
+    "about": {
         "text1": "Seamless multilingual solutions",
         "subtext11": "We offer solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
         "subtext12": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
         "subtext13": "Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
-        
         "text2": "Our story",
         "subtext21": "Gettranslation was established in 2017 in Estonia by a group of linguists with more than 20 years of experience in the field of linguistic services.",
         "subtext22": "Shortly after, we decided to do something unusual for online businesses: to allow our customers to pay after the translation was delivered.",
         "subtext23": "For the last 5 years we have been growing at a steady rate, increasing our production from an average of 50,000 translations delivered in 2017, to 400,000 in 2022.",
-        
         "text3": "Our vision",
         "subtext31": "Gettranslation’s vision is to be the world's premier provider of global language and business solutions.",
         "subtext32": "We will accomplish this by applying all of our passion, dedication, and innovation to help our clients and partners improve their businesses and achieve their goals.",
@@ -128,5 +114,64 @@
     "buttons": {
         "quote": "Instant quote",
         "about": "About us"
+    },
+    "quote": {
+        "banner_text": "Professional translations in a few clicks",
+        "banner_subtext": "The easy way to get your documents translated fast. Simple, accurate, secure.",
+
+        "calc_label1": "From",
+        "calc_label2": "To",
+        "calc_label3": "Word count",
+        "calc_label4": "Subject",
+        "calc_label5": "Delivery date",
+
+        "pay_item1": "Pay after delivery",
+        "pay_item2": "We trust you:",
+        "pay_item3": "feel free to pay within 5 days from delivery via bank transfer, credit card, or PayPal.",
+        "pay_item4": "Learn more",
+
+        "mod_text_word": "Word count tool",
+        "mod_text_date": "Select the delivery date",
+        "best_price_label": "Auto (best price)",
+        "guaranteed_label": "Delivery guaranteed by",
+        "option_timezone_label1": "(EET) Eastern European Time",
+        "option_timezone_label2": "(CET) Central European Time",
+
+        "loading_label": "Choosing the best available translator",
+        "upload_mod_status_word_process": "Counting...",
+        "submitted_label": "Choose your solution",
+        "done_btn": "Done",
+
+        "tag_card": "Best Seller",
+        "card_title1": "Premium",
+        "card_title2": "Professional",
+        "card_title3": "Basic",
+        "card_points1": "Translator",
+        "card_points2": "Specialized Reviser",
+        "card_points3": "Quality control",
+        "card_points4": "Machine translation",
+        "card_points5": "Light review",
+        "delivery_label": "delivery guaranteed by",
+        "needfast_label": "Need it faster?",
+        "about_label1": "about €0,15 / word",
+        "about_label2": "about €0,10 / word",
+        "about_label3": "about €0,04 / word",
+        "submit_order": "Order",
+        "detail1_text1": "Translation by a native professional translator. Full revision by a second native professional translator. Final quality control by a dedicated project manager. Translation memory and glossary included upon request. High-quality translation for publication purposes.",
+        "detail1_text2": "Translation by a native professional translator. Quality evaluation by a second native professional translator. Final quality control by a dedicated project manager. Translation memory included upon request. Professional translation for standard projects.",
+        "detail1_text3": "Light edit of a machine generated translation by a native professional translator to remove the most serious errors only. Not available for scanned PDFs and images. Valuable translation for understanding or personal use. Not suitable for publication purposes.",
+        "moredetails_label": "More details",
+
+        "status_error1": "Unfortunately we could not count the words for this file.",
+        "status_error2": "Please insert the estimated word count:",
+        "status_error3": "if you wish us to count words for you.",
+        "status_error3_bold": "Contact us",
+
+        "more_text": "Have a large project? Get in touch.",
+        "more_subtext": "We will help you get a quote for complex documents, PDFs, websites, software, and more.",
+        "more_btn": "Contact us",
+        "more_img_text": "Hello, I'm Lisa. How can I help you?",
+        "more_img_subtext": " - Senior Account Manager",
+        "more_bold": "Lisa"
     }
 }

@@ -1,3 +1,5 @@
+@import '../../responsive.scss';
+
 ul {
     list-style: none;
     display: flex;
@@ -8,20 +10,17 @@ a:hover {
     color:#4247E5;
 }
 .header{
-    // position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 1152px;
     height: 44px;
-    // left: 224px;
-    // top: 40px;
-
 
     margin-top: 40px;
-    // margin-left: 224px ;
-    // left:50%; 
-    // margin-left:-576px
+    @include tablet-portrait-down{
+        display: none;
+    }
+
 }
 
 .links {
