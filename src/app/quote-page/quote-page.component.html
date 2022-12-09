@@ -34,7 +34,7 @@
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label2' | translate }}</div>
         <div class="to_drop">
-            <div (click)="openDropdown()" id="dropdown">
+            <div (click)="openDropdown()" id="dropdown" tabindex="1">
                 <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox"
                     id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'"
@@ -280,6 +280,7 @@
     </div>
     <div (click)="allModalClose()" [ngClass]="{'popup-fade': upload_mod || date_mod }"></div>
     <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdown }"></div>
+    <div class="logo_block"><img alt="logo gettranslation" class="logo_img" src="../../assets/logo_gettrans.svg"/> </div>
 </div>
 <div class="liza">
     <div class="liza_information">

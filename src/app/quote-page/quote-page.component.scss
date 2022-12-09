@@ -106,7 +106,7 @@
     flex-wrap: wrap;
     align-items: center;
 
-    padding: 36px 32px;
+    padding: 36px 32px 16px;
     min-height: 344px;
     height: 100%;
     max-width: 1168px;
@@ -123,18 +123,18 @@
     }
 
     @include tablet-landscape-down {
-        padding: 32px 24px;
+        padding: 32px 24px 16px;
         margin: 0px 48px;
     }
 
     @include tablet-portrait-down {
-        margin: 0px 32px;
+        margin: 0px 32px 16px;
     }
 
     @include mobile-only {
         flex-direction: column;
         flex-wrap: nowrap;
-        padding: 32px 24px;
+        padding: 32px 24px 16px;
         margin: 0px 24px;
     }
 }
@@ -198,9 +198,12 @@ select:focus {
     @include mobile-only {
         width: 100%;
         padding-left: 20px;
+        font-size: 14px;
     }
 }
-
+.box_item:focus{
+    border: 2px solid #4247E5;
+}
 .box_item:hover {
     cursor: pointer;
 }
@@ -243,16 +246,22 @@ select:focus {
     width: 1px;
     height: 30px;
     top: 36%;
-    right: 65%;
+    right: 60%;
     border-radius: 0px;
 
     background: rgba(172, 173, 183, 0.2);
+    @include tablet-landscape-down {
+        right: 65%;
+    }    
+    @include mobile-only {
+        display: none;
+    }
 }
 
 .or {
     position: absolute;
     top: 40%;
-    right: 55%;
+    right: 50%;
     height: 24px;
     width: 17px;
 
@@ -263,7 +272,9 @@ select:focus {
     line-height: 24px;
 
     color: rgba(172, 173, 183, 0.5);
-
+    @include tablet-landscape-down {
+        right: 55%;
+    }  
     @include mobile-only {
         display: none;
     }
@@ -341,6 +352,9 @@ select {
         width: 118px;
         height: 30px;
         top: 38%;
+    }
+    @include mobile-only{
+        right: 6%;
     }
 }
 
@@ -480,6 +494,20 @@ select {
 
 .logo_block {
     display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+    @include tablet-landscape-down{
+        justify-content: center;
+        margin-top: 32px;
+    }    
+    @include mobile-only{
+        margin-top: 28px;
+    }
+}
+.logo_img{
+    margin: 0;
+    width: 158px;
+    height: 18px;
 }
 
 .our_clients {
@@ -876,7 +904,10 @@ select {
     border-radius: 12px;
     color: #4247E5;
 }
-
+.logo_block{
+    display: flex;
+    width: 100%;
+}
 
 //helper Liza
 .liza {
@@ -1981,6 +2012,10 @@ input::-webkit-inner-spin-button {
 
 }
 
+#dropdown:focus-within{
+    border: 2px solid #4247E5;
+}
+
 #dropdown label {
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -1997,6 +2032,11 @@ input::-webkit-inner-spin-button {
     @include mobile-only {
         padding-top: 20px;
         padding-left: 10px;
+        font-family: 'Nexa Regular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
     }
 
 }
@@ -2026,6 +2066,7 @@ input::-webkit-inner-spin-button {
     -moz-box-sizing: border-box;
     z-index: 9999;
     position: absolute;
+    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
 
     @include tablet-landscape-down {
         width: 280px;
