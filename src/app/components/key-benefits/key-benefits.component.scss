@@ -13,7 +13,7 @@
         flex-direction: column;
     }
     @include tablet-portrait-down{
-        margin: 0 32px 120px;
+        margin: 0 24px 140px;
 
     }
 }
@@ -42,6 +42,7 @@
     }
     @include tablet-portrait-down {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -96,6 +97,7 @@
     }
     @include tablet-portrait-down {
         margin: 0  0 16px 0;
+        max-width: 327px;
     }
 }
 
@@ -131,10 +133,6 @@
     font-weight: 800;
     font-size: 18px;
     line-height: 26px;
-    @include tablet-landscape-down {
-        font-size: 14px;
-        line-height: 22px;
-    }
 }
 
 .benefit_subtext {

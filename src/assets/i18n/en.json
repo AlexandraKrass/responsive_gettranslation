@@ -97,6 +97,10 @@
         "work_text": "We are constantly looking to hire great engineers with a global mindset. We are tackling the most difficult issue relating to AI: human language. We are doing it with ethics and speed by creating an unprecedented symbiosis between humans and machines.",
         "work_link": "Apply now"
     },
+    "translators": {
+        "banner_text": "Seamless working environment",
+        "banner_subtext": "Get the chance to work on interesting projects, at your own pace, and deciding your own rate. We provide the technology for free, and support your career with continuous education programs."
+    },
     "about": {
         "text1": "Seamless multilingual solutions",
         "subtext11": "We offer solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
@@ -113,7 +117,8 @@
     },
     "buttons": {
         "quote": "Instant quote",
-        "about": "About us"
+        "about": "About us",
+        "translator": "Apply as a translator"
     },
     "quote": {
         "banner_text": "Professional translations in a few clicks",
@@ -173,5 +178,20 @@
         "more_img_text": "Hello, I'm Lisa. How can I help you?",
         "more_img_subtext": " - Senior Account Manager",
         "more_bold": "Lisa"
+    },
+    "whychoose": {
+        "title": "Why choose us",
+        "description": "We pride ourselves in being considered one of the best companies to work with by translators. We pay them rapidly and fairly, wherever they are in the world.",
+        "card_text1": "Guaranteed Quality",
+        "card_subtext1": "We support the world’s best translators with advanced quality assurance processes. And that’s not all: we provide a free comprehensive translation review if you happen to be unsatisfied.",
+
+        "card_text2": "On-Time Delivery",
+        "card_subtext2": "We offer the best performance levels in the industry, with an optimized workflow that guarantees over 95% of deliveries on time. Plus, in the unlikely event we miss a deadline, we will refund the translation up to its full cost.",
+
+        "card_text3": "Pay After Delivery",
+        "card_subtext3": "We genuinely trust our clients, which is why we have created the Pay After Delivery model. With Pay After Delivery, you can pay within five days of the translation’s delivery via credit card, bank transfer or Paypal.",
+
+        "card_link": "Read our terms"
+
     }
 }

@@ -1,11 +1,22 @@
 <app-header></app-header>
-<div class="banner_text">Seamless working environment</div>
-<div class="banner_subtext">Get the chance to work on interesting projects, at your own pace, and deciding your own rate. We provide the technology for free, and support your career with continuous education programs.</div>
-<button class="btn_instant">
-    <a class="white" href="https://app.gettranslation.io/en/translator/sign-up?id=16&filial=26" target="_blank">Apply as a translator</a>
-</button>
-<button [routerLink]="['/about']" class="btn_about">About us</button>
-<img class="illustration" src="../../assets/illustrations/illustration-3.svg" alt="">
+
+<div class="banner">
+    <div class="flex-column">
+    <div class="banner_container">
+        <div class="banner_text">{{ 'translators.banner_text' | translate }}</div>
+        <div class="banner_subtext">{{ 'translators.banner_subtext' | translate }}</div>    
+    </div>
+    <div class="buttons">
+        <button [routerLink]="['/quote']" class="btn_instant">
+            <a class="white" href="https://app.gettranslation.io/en/translator/sign-up?id=16&filial=26" target="_blank">
+                {{ 'buttons.translator' | translate }}
+            </a>
+        </button>
+        <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+    </div>
+</div>
+    <div class="illustration_cont"><img class="illustration" src="../../assets/illustrations/illustration-3.svg" alt=""></div>
+</div>
 
 <div class="supported_maintext">We are recruiting language talent</div>
 <div class="supported_block1"></div>

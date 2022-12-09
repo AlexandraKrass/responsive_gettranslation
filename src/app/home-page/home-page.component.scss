@@ -1,35 +1,6 @@
 @import '../../responsive.scss';
 
 :host {display: block;}
-.logo_block {
-    display: flex;
-    max-width: 1168px;
-    margin: 0 auto 140px;
-    @include desktop-down{
-        margin: 0 64px 140px;
-    }    
-    @include tablet-landscape-down{
-        margin: 0 48px 120px;
-    }
-    @include tablet-portrait-down{
-        margin: 0 32px 120px;
-    }
-}
-
-.our_clients {
-    display: flex;
-    max-width: 1168px;
-    margin: 0 auto 140px;
-    @include desktop-down{
-        margin: 0 64px 140px;
-    }    
-    @include tablet-landscape-down{
-        margin: 0 48px 120px;
-    }
-    @include tablet-portrait-down{
-        margin: 0 32px 120px;
-    }
-}
 
 .our_professional {
 
@@ -44,49 +15,21 @@
     margin-left:-576px
 }
 
-.key_benefits {
-    display: flex;
-    max-width: 1168px;
-    margin: 0 auto 140px;
-    @include desktop-down{
-        margin: 0 64px 140px;
-    }    
-    @include tablet-landscape-down{
-        margin: 0 48px 120px;
-    }
-    @include tablet-portrait-down{
-        margin: 0 32px 120px;
-    }
+.logoblock{
+    display: flex; 
 }
-
 .embrace {
     display: flex;
 }
-
+.benefits{
+    display: flex;
+}
 .instant {
-    position: absolute;
-    top: 5157px;
-    width: 1152px;
-    height: 280px;
-    left: 224px;
-
-    left:50%; 
-    margin-left:-576px
+    display: flex;
 }
 
 .more {
     display: flex;
-    max-width: 1168px;
-    margin: 0 auto 140px;
-    @include desktop-down{
-        margin: 0 64px 140px;
-    }    
-    @include tablet-landscape-down{
-        margin: 0 48px 120px;
-    }
-    @include tablet-portrait-down{
-        margin: 0 32px 120px;
-    }
 }
 
 .footer{

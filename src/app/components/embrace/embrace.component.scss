@@ -8,14 +8,14 @@
         margin: 0 64px 140px;
     }    
     @include tablet-landscape-down {
-        margin: 0 48px 120px;
+        margin: 0 48px 140px;
         flex-direction: row-reverse;
         justify-content: space-between;
 
     }
     @include tablet-portrait-down {
-        margin: 0 32px 120px;
-        flex-direction: column-reverse;
+        margin: 0 24px 140px;
+        flex-direction: column;
         align-items: center;
         width: 100%;
     }
@@ -39,7 +39,8 @@
 
     @include tablet-portrait-down {
         min-height: 244px;
-        max-width: 300px;
+        max-width: 327px;
+        margin: 0 0 48px 0;
     }
 }
 
@@ -72,6 +73,9 @@
         font-size: 36px;
         line-height: 40px;
         margin: 0 0 14px 0;
+    }    
+    @include tablet-landscape-down {
+        width: 60%;
     }
 }
 

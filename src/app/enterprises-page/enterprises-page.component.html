@@ -2,15 +2,17 @@
 
 <div class="banner">
     <div class="flex-column">
+    <div class="banner_container">
         <div class="banner_text">{{ 'enterprises.banner_text' | translate }}</div>
         <div class="banner_subtext">{{ 'enterprises.banner_subtext' | translate }}</div>    
-        <div class="buttons">
-            <button [routerLink]="['/quote']" class="btn_instant">{{ 'buttons.quote' | translate }}</button>
-            <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
-        </div>
     </div>
+    <div class="buttons">
+        <button [routerLink]="['/quote']" class="btn_instant">{{ 'buttons.quote' | translate }}</button>
+        <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+    </div>
+</div>
+    <div class="illustration_cont"><img class="illustration"  src="../../assets/illustrations/illustration-1.svg" alt=""></div>
 
-    <img class="illustration" src="../../assets/illustrations/illustration-1.svg" alt="">
 </div>
 
 <div class="flex">

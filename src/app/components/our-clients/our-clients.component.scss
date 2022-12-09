@@ -6,8 +6,20 @@ a {
 
 .clients_container {
     display: flex;
-    @include tablet-landscape-down{
+    max-width: 1168px;
+    margin: 0 auto 140px;
+
+    @include desktop-down {
+        margin: 0 64px 140px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 0 48px 140px;
         flex-direction: column-reverse;
+    }
+
+    @include tablet-portrait-down {
+        margin: 0 32px 140px;
     }
 }
 
@@ -26,7 +38,7 @@ a {
         padding: 32px 40px;
     }    
     @include mobile-only{
-        padding: 32px 24px;
+        padding: 40px 24px;
     }  
 }
 
@@ -72,6 +84,7 @@ a {
     line-height: 20px;
     width: 100%;
     margin-top: 16px;
+    text-align: center;
 }
 
 .cta {
