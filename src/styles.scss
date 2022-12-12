@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import './responsive.scss';
 
 @font-face {
     font-family: 'Nexa XBold';
@@ -117,6 +118,129 @@ input:focus {
 
 .btn3_hover:hover {
     border: 1px solid #4247E5;
+}
+.cookie_container{
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 9999;
+
+    min-height: 40px;
+    background: #4247E5;
+    color: #FFFFFF;
+    
+    text-align: center;
+    box-sizing: border-box;
+}
+.cookie_body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1000px;
+    width: 100%;
+    @include desktop-down{
+        justify-content: space-around;
+    }
+}
+.cookie_content{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    @include desktop-down{
+        max-width: 768px;
+        flex-direction: column;
+    }
+    @include tablet-landscape-down{
+        max-width: 500px;
+    }    
+    @include tablet-portrait-down{
+        max-width: 252px;
+        margin-bottom: 12px;
+    }
+}
+.cookie_descr{
+    margin: 0;
+    font-weight: 400;
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+}
+.coookie_learn_more{
+    color: #FFFFFF;
+    font-family: "Nexa XBold";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 0 3px;
+    @include tablet-portrait-down{
+        display: none;
+    }
+}
+.coookie_learn_more:hover{
+    color: #FFFFFF;
+}
+.cookie_close{
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    @include tablet-portrait-down{
+        display: none;
+    }
+}
+.cookie_close #close{
+    fill: #FFFFFF!important;
+}
+.buttons_mobile_view{
+    display: none;
+    @include tablet-portrait-down{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+.button_learn{
+    display: flex;
+    height: 34px;
+    width: 112px;
+    margin: 0 8px 0 0;
+    padding: 8px 22px;
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center; 
+
+    color: #4247E5;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+.button_close{
+    height: 34px;
+    width: 122px;
+    margin: 0;
+    padding: 8px auto;
+
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;  
+    text-align: center;
+
+    color: #FFFFFF;
 }
 
 // @media (min-width: 374px) {

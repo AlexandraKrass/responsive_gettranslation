@@ -7,6 +7,12 @@
         "contact": "Contact us",
         "instant": "Instant quote"
     },
+    "cookies": {
+        "description": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+        "link": "Learn more",
+        "button1": "Learn more",
+        "button2" : "Close"
+    },
     "home": {
         "banner_text": "Seamless multilingual solutions",
         "banner_subtext": "Solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
@@ -74,7 +80,7 @@
         "banner_text": "Seamless solutions for your business",
         "banner_subtext": "Trusted partnerships, reliable support and accessible solutions at scale. Our expertise and solutions are always tailored to your specific business, markets and goals.",
         "accuracy_maintext": "Accuracy starts with processes",
-        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
+        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly. ",
         "accuracy_link": "Production Process"
     },
     "developers": {
